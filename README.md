@@ -17,8 +17,15 @@ Java Runtime Environment (JRE) required.
 Single JAR runs under Windows 32/64, Linux 32/64.
 Required console mode to run, for example PowerShell or Linux terminal.
 
-java -jar pcidump.jar <input binary file> <output text file>
 
-input binary file = MCFG binary image, saved by external tools.
-output text file = generated text report.
+java -jar pcidump.jar input.bin output.txt
+
+
+input.bin , input binary file
+MCFG binary image, saved by external tools.
+
+output.txt, output text file
+generated text report.
+
+
 
