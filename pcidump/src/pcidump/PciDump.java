@@ -1,4 +1,4 @@
-//---------- PCI dump utility. (C) IC Book Labs --------------------------------
+//---------- PCI dump utility. (C)2018 IC Book Labs ----------------------------
 // Main module.
 
 // Text Report = F ( Binary File)
@@ -11,6 +11,8 @@
 // otherwise insufficient memory errors
 
 // REMOVE OLD_* DATABASE FILES, OTHERWISE UNUSED DATA IMPROVE APPLICATION SIZE.
+// TODO: report database access error, use "message=" string.
+//
 
 package pcidump;
 
@@ -25,11 +27,11 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IOSample1 
+public class PciDump 
 {
 
 private static final String MSG_ABOUT =
-    "PCI binary image analyser v0.08. (C)2018 IC Book Labs.";
+    "PCI binary image analyser v0.09. (C)2018 IC Book Labs.";
 
 private static final String MSG_LINE_ERROR =
         "Invalid command line, usage:" +
@@ -138,7 +140,7 @@ public static void main(String[] args)
 
     if (validInput)
         {
-        URL resource = IOSample1.class.getResource
+        URL resource = PciDump.class.getResource
             ( "/pcidump/resources/pci.inf" ); 
         if ( resource != null )
             {

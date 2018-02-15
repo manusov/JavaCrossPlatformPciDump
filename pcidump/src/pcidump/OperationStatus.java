@@ -1,4 +1,4 @@
-//---------- PCI dump utility. (C) IC Book Labs --------------------------------
+//---------- PCI dump utility. (C)2018 IC Book Labs ----------------------------
 // Module for status information class.
 
 package pcidump;
