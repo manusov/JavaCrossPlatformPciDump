@@ -71,6 +71,7 @@ protected OperationStatus load()
             {
             for ( dev=0; dev<DEVICES_PER_BUS; dev++ )
                 {
+                fnc = 0;  // v0.11 bug fix
                 int x = pci.readDword( bus, dev, fnc, 0xC );
                 boolean multifunction = false;
                 if ( (x & 0x800000) != 0 ) multifunction = true;
@@ -135,6 +136,7 @@ protected OperationStatus load()
             {
             for ( dev=0; dev<DEVICES_PER_BUS; dev++ )
                 {
+                fnc = 0;  // v0.11 bug fix
                 int x = pci.readDword( bus, dev, fnc, 0xC );
                 boolean multifunction = false;
                 if ( (x & 0x800000) != 0 ) multifunction = true;

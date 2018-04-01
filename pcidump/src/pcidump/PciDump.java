@@ -31,7 +31,7 @@ public class PciDump
 {
 
 private static final String MSG_ABOUT =
-    "PCI binary image analyser v0.10. (C)2018 IC Book Labs.";
+    "PCI binary image analyser v0.11. (C)2018 IC Book Labs.";
 
 private static final String MSG_LINE_ERROR =
         "Invalid command line, usage:" +
@@ -54,6 +54,14 @@ public static void main(String[] args)
     {
         
 //----------( ! )--- This fragments for debug ----------------------------------
+/*
+        args = new String[]
+        {
+        "C:\\TEMP2\\test.bin" , 
+        "C:\\TEMP2\\test.txt" , 
+        };
+*/
+        
 /*        
     args = new String[]
         {
@@ -99,7 +107,7 @@ public static void main(String[] args)
         }
     else
         {
-        nameIn = args[0];
+        nameIn  = args[0];
         nameOut = args[1];
         System.out.println( "Input file  = " + nameIn );
         System.out.println( "Output file = " + nameOut );
