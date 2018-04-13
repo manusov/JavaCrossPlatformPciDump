@@ -1,8 +1,8 @@
 #
 #	List of PCI ID's
 #
-#	Version: 2018.03.30
-#	Date:    2018-03-30 03:15:02
+#	Version: 2018.04.06
+#	Date:    2018-04-06 03:15:02
 #
 #	Maintained by Albert Pool, Martin Mares, and other volunteers from
 #	the PCI ID Project at http://pci-ids.ucw.cz/.
@@ -1109,7 +1109,7 @@
 		1002 0080  Rage Pro Turbo
 		1002 0084  Rage Pro Turbo
 		1002 4750  Rage Pro Turbo
-	4752  Rage XL PCI
+	4752  Rage 3 [Rage XL PCI]
 		0e11 001e  Proliant Rage XL
 		1002 0008  Rage XL
 		1002 4752  Proliant Rage XL
@@ -1717,6 +1717,12 @@
 		17aa 368f  Radeon R5 A230
 	6667  Jet ULT [Radeon R5 M230]
 	666f  Sun LE [Radeon HD 8550M / R5 M230]
+	66a0  Vega 20
+	66a1  Vega 20
+	66a2  Vega 20
+	66a3  Vega 20
+	66a7  Vega 20
+	66af  Vega 20
 	6704  Cayman PRO GL [FirePro V7900]
 	6707  Cayman LE GL [FirePro V5900]
 	6718  Cayman XT [Radeon HD 6970]
@@ -3544,6 +3550,7 @@
 		17aa 5113  Radeon R6 Graphics
 		17aa 5116  Radeon R6 Graphics
 		17aa 5118  Radeon R5 Graphics
+	98e4  Radeon R2 Graphics
 	9900  Trinity [Radeon HD 7660G]
 		103c 1985  Pavilion 17-e163sg Notebook PC
 # AMD A10-5800K CPU
@@ -6401,7 +6408,7 @@
 		1077 0007  QLogic 2x1GE+2x10GE QL41264HMCU CNA
 		1077 0009  QLogic 2x1GE+2x10GE QL41162HMRJ CNA
 		1077 000b  25GE 2P QL41262HxCU-DE Adapter
-		1077 0011  FastLinQ QL41212H 25GbE Adapter
+		1077 0011  FastLinQ QL41212HLCU 25GbE Adapter
 		1077 0012  FastLinQ QL41112H 10GbE Adapter
 		1077 0039  QLogic QL41262 PCIe 25Gb 2-Port SFP28 Ethernet Adapter
 		1590 021d  10/25GbE 2P QL41222HLCU-HP Adapter
@@ -11078,6 +11085,7 @@
 	1b01  GP102
 	1b02  GP102 [TITAN Xp]
 	1b06  GP102 [GeForce GTX 1080 Ti]
+	1b07  GP102 [P102-100]
 	1b30  GP102GL [Quadro P6000]
 	1b38  GP102GL [Tesla P40]
 	1b70  GP102GL
@@ -11152,6 +11160,7 @@
 	1db4  GV100GL [Tesla V100 PCIe 16GB]
 	1db5  GV100GL [Tesla V100 SXM2 32GB]
 	1db6  GV100GL [Tesla V100 PCIe 32GB]
+	1db7  GV100GL [Tesla V100 DGXS 32GB]
 	1dba  GV100GL [Quadro GV100]
 10df  Emulex Corporation
 	0720  OneConnect NIC (Skyhawk)
@@ -14290,10 +14299,11 @@
 	7384  PM7384 [FREEDM - 84P672 Frm Engine & Datalink Mgr]
 	8000  PM8000  [SPC - SAS Protocol Controller]
 	8009  PM8009 SPCve 8x6G
-	8032  ATTO Celerity FC8xEN
+	8032  PM8032 Tachyon QE8
 		117c 003a  Celerity FC-81EN Fibre Channel Adapter
 		117c 003b  Celerity FC-82EN Fibre Channel Adapter
 		117c 003c  Celerity FC-84EN Fibre Channel Adapter
+		117c 403b  ThunderLink FC 1082 Fibre Channel Adapter
 	8053  PM8053 SXP 12G 24-port SAS/SATA expander
 	8054  PM8054 SXP 12G 36-port SAS/SATA expander
 	8055  PM8055 SXP 12G 48-port SAS/SATA expander
@@ -14586,7 +14596,8 @@
 	0d13  Desktop PCI L1/L3 Telephony
 1232  GPT Limited
 1233  Bus-Tech, Inc.
-1235  Risq Modular Systems, Inc.
+# nee Risq Modular Systems, Inc.
+1235  SMART Modular Technologies
 1236  Sigma Designs Corporation
 	0000  RealMagic64/GX
 	6401  REALmagic 64/GX (SD 6425)
@@ -30068,6 +30079,14 @@ C 00  Unclassified device
 C 01  Mass storage controller
 	00  SCSI storage controller
 	01  IDE interface
+		00  ISA Compatibility mode-only controller
+		05  PCI native mode-only controller
+		0a  ISA Compatibility mode controller, supports both channels switched to PCI native mode
+		0f  PCI native mode controller, supports both channels switched to ISA compatibility mode
+		80  ISA Compatibility mode-only controller, supports bus mastering
+		85  PCI native mode-only controller, supports bus mastering
+		8a  ISA Compatibility mode controller, supports both channels switched to PCI native mode, supports bus mastering
+		8f  PCI native mode controller, supports both channels switched to ISA compatibility mode, supports bus mastering
 	02  Floppy disk controller
 	03  IPI bus controller
 	04  RAID bus controller
@@ -30215,7 +30234,10 @@ C 0c  Serial bus controller
 	04  Fibre Channel
 	05  SMBus
 	06  InfiniBand
-	07  IPMI SMIC interface
+	07  IPMI Interface
+		00  SMIC
+		01  KCS
+		02  BT (Block Transfer)
 	08  SERCOS interface
 	09  CANBUS
 C 0d  Wireless controller
@@ -30641,4 +30663,4 @@ ID 001F Precision Time Management, PTM
 ID 0020 M-PCIe
 ID 0021 Function Readiness Status Queuing, FRS
 ID 0022 Readiness Time Reporting
-
+ID 0023 Designated Vendor specific
