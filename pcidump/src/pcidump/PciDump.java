@@ -31,10 +31,10 @@ public class PciDump
 {
 
 private static final String MSG_ABOUT =
-    "PCI binary image analyser v0.15. (C)2018 IC Book Labs.";
+    "PCI binary image analyser v0.16. (C)2018 IC Book Labs.";
 
 private static final String MSG_LINE_ERROR =
-        "Invalid command line, usage:" +
+    "Invalid command line, usage:" +
     "\r\njava -jar pcidump.jar <inputfile.bin> <outputfile.txt>";
 
 private static String nameIn, nameOut;             // input, output files names
