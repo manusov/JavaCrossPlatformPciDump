@@ -1,0 +1,87 @@
+Save binary image of memory-mapped configuration (MCFG).
+Use RWEverything utility.
+http://rweverything.com/
+http://rweverything.com/download/
+
+1) step1.png. 
+Press "ACPI".
+
+2) step2.png.
+Select ACPI table MCFG,
+read start address, in this example start address = E0000000h.
+calculate end address = f(last bus number),
+add to start address XXFFFFFh,
+XX = last bus number.
+For this example:
+E0000000h + 0FFFFFFFh = EFFFFFFFh.
+Base address and length values is platform-specific.
+
+3) step3.png.
+View memory dump (this is memory-mapped IO, not RAM).
+
+4) step4.png.
+Select save memory to file, input start and end address,
+don't input length (updated automatically).
+For this example:
+Start = E0000000h
+End   = EFFFFFFFh
+Length = End - Start + 1 = 10000000h = 256 MB.
+Base address and length values is platform-specific.
+
+5) Save can take 10-20 minutes.
+
+MCFG available for PCIe/PCI-X platforms,
+not available for platforms with Legacy PCI only.
+
+---
+
+Последовательность шагов для сохранения двоичного образа диапазона MCFG
+(memory mapped configuration) с помощью утилиты RWEverything.
+
+1) step1.png
+Нажимаем кнопку ACPI.
+
+2) step2.png
+Выбираем таблицу MCFG,
+читаем стартовый адрес, в данном примере E0000000h
+вычисляем конечный адрес по номеру последней шины,
+для этого к стартовому адресу нужно прибавить XXFFFFFh,
+где XX = номер последней шины,
+в нашем примере E0000000h + 0FFFFFFFh = EFFFFFFFh.
+На другой платформе могут быть другие числа!
+
+3) step3.png
+Выбираем режим дампа памяти.
+
+4) step4.png
+Выбираем сохранение дампа в файл, вводим начальный и
+конечный адреса,  а длина (Length) обновляется
+автоматически, ее не вводим.
+В нашем примере:
+Start = E0000000h
+End   = EFFFFFFFh
+Length = End - Start + 1 = 10000000h = 256 MB.
+На другой платформе могут быть другие числа!
+
+5) Выполняем сохранение файла, рекомендуемое имя MCFG.BIN.
+Сохранение может занимать 10-20 минут,
+прогресс-индикатора нет, но процесс можно мониторить, если
+открыть папку, в которую происходит сохранение и следить
+за изменением размера файла. Размер может не обновляться
+автоматически, возможно потребуется выходить и входить из
+папки, чтобы видеть изменение размера
+(все шишки в сторону RWE и Windows, у нас в DOS ICDiag прогресс-индикатор есть ).
+
+Далее я могу сделать сам:
+
+6) По сохраненному двоичному файлу (*.bin) может быть сгенерирован текстовый
+рапорт, с помощью java-приложения:
+https://github.com/manusov/JavaCrossPlatformPciDump
+
+Теория:
+http://icbook.com.ua/press/memory_mapped_configuration/
+http://composter.com.ua/content/posobie-dlya-kompyuternyh-diggerov-2016-02-08
+
+MCFG поддерживается только для платформ с поддержкой PCI Express / PCI-X.
+
+
