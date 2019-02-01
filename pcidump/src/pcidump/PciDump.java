@@ -31,7 +31,7 @@ public class PciDump
 {
 
 private static final String MSG_ABOUT =
-    "PCI binary image analyser v0.22. (C)2018 IC Book Labs.";
+    "PCI binary image analyser v0.23. (C)2019 IC Book Labs.";
 
 private static final String MSG_LINE_ERROR =
     "Invalid command line, usage:" +
