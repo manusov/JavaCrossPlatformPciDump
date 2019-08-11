@@ -1,0 +1,39 @@
+v0.30 (11.08.2019)
+Update database, include new Standard and Extended capabilities structures.
+Add Standard and Extended capabilities, correct names of existing capabilities.
+
+Additions to SCAP (Standard Capabilities):
+ID 14 Enhanced Allocation (EA)
+ID 15 Flattening Portal Bridge (FPB)
+
+Additions to ECAP (Extended Capabilities):
+ID 0014 Reserved for AMD
+ID 001A Protocol Multiplexing (PMUX)
+ID 0024 VF Resizable BAR
+ID 0025 Data Link Feature
+ID 0026 Physical Layer 16.0 GT/S
+ID 0027 Lane Margining at the Receiver
+ID 0028 Hierarchy ID
+ID 0029 Native PCIe Enclosure Management (NPEM)
+
+Actual documents about new capabilities structures.
+
+[1]
+Structures list can be found at:
+GenZ Core Specification Version 1.0
+983 pages.
+#GENZ
+G:\data_2018\doc_gen_z
+Gen-Z Core Specification version 1.0.pdf
+http://genzconsortium.org/download-the-latest-gen-z-specifications/
+
+[2]
+Some new structures detalization can be found at:
+Power Systems Host Bridge 4 (PHB4) Specification
+IBM OpenPOWER
+317 pages.
+#OPENPOWER, #PCIECAP
+G:\data_2019\doc_cpu_ibm_power
+P9_PHB_version1.0_27July2018_pub.PDF
+https://wiki.raptorcs.com/w/images/a/ad/P9_PHB_version1.0_27July2018_pub.pdf
+
