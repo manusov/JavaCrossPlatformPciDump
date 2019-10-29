@@ -1,4 +1,9 @@
 
+PCIdump v0.00.40 (October, 29, 2019)
+Internal refactoring and optimization.
+Update database.
+
+
 PCIdump v0.31 (September, 21, 2019)
 Update database.
 
