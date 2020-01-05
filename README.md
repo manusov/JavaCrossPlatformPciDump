@@ -28,4 +28,6 @@ output.txt, output text file,
 generated text report.
 
 
+Detail instruction for save binary dump:
 
+http://composter.com.ua/content/kak-sokhranit-obraz-konfiguracionnogo-pci-prostranstva-v-dvoichnyy-fayl
