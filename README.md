@@ -5,7 +5,6 @@ Required binary image of MCFG
 as input file.
 MCFG binary image file must be saved by external tools
 (off-line mode only supported yet).
-
 <a href="https://composter.com.ua/content/kak-sokhranit-obraz-konfiguracionnogo-pci-prostranstva-v-dvoichnyy-fayl">How to save the image of the PCI configuration space to a binary file?</a>
 
 PCIDUMP directory contains Java sources (NetBeans project).
