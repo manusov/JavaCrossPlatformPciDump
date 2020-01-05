@@ -6,9 +6,9 @@ as input file.
 MCFG binary image file must be saved by external tools
 (off-line mode only supported yet).
 
-PCIDUMP directory contains Java sources (NetBeans project).
+<a href="https://composter.com.ua/content/kak-sokhranit-obraz-konfiguracionnogo-pci-prostranstva-v-dvoichnyy-fayl">How to save the image of the PCI configuration space to a binary file?</a>
 
-DATABASE directory contains INF files edit history.
+PCIDUMP directory contains Java sources (NetBeans project).
 
 BINARIES_AND_REPORTS directory contains binary images and generated reports.
 
@@ -27,8 +27,4 @@ MCFG binary image, saved by external tools.
 output.txt, output text file,
 generated text report.
 
-
-Detail instruction for save binary dump:
-
-<a href="https://composter.com.ua/content/kak-sokhranit-obraz-konfiguracionnogo-pci-prostranstva-v-dvoichnyy-fayl">How to save the image of the PCI configuration space to a binary file?</a>
 
