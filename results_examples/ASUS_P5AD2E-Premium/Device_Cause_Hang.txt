@@ -1,0 +1,24 @@
+This platform supported with bug.
+ASUS P5AD2E-Premium
+Hang on unused function 1 of CMD Technology (Silicon Image) RAID Controller.
+
+MCFG base    = E0000000h
+Hang address = E0129700h
+
+E0129700h = 1110.0000.0001.0010.1001.0111.0000.0000b
+
+PCI bus      = 1
+PCI device   = 5
+PCI function = 1
+
+E0129700h = Hang on unused function 1 of CMD Technology RAID Controller.
+E0128000h = Normal view used function 0 of CMD Technology RAID Controller.
+
+Temporary solution:
+Can save dump if disable CMD Technology (Silicon Image) RAID Controller
+by CMOS Setup.
+
+Possible solutions:
+Required intellectual reader,
+not scan all 8 PCI functions if single-function device.
+But required optional "raw scan all" mode for find undocumented resources.

@@ -1,0 +1,4 @@
+This platform yet not supported.
+ASUS P5V-VM-Ultra
+
+Hang bug on this board.

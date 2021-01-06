@@ -1,0 +1,18 @@
+This platform supported with bug.
+
+If read configuration space by legacy ports CFGADDR/CFGDATA (0CF8h/0CFCh),
+both under DOS (ICDiag) or under Windows (RWEverything),
+CPU internal resources (PCI bus 0, device 18h, functions 0-3) present.
+
+If read configuration space by memory-mapped configuration space,
+both under DOS (ICDiag) or under Windows (RWEverything),
+CPU internal resources (PCI bus 0, device 18h, functions 0-3) absent.
+
+Cause:
+Old CPU without support PCI Express architecture.
+For this platform, MCFG provided by I/O bridge (chipset).
+
+Possible solutions:
+1) Design reader for legacy mode (ports CFGADDR/CFGDATA).
+2) Hyper-transport specific memory mapped configuration.
+Variant (1) is more universal, for all legacy platforms.

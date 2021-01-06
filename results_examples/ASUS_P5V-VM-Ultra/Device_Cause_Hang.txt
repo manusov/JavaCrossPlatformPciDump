@@ -1,0 +1,28 @@
+This platform yet not supported.
+ASUS P5V-VM-Ultra
+
+MCFG base = E0000000h
+Hang on address = E00A7820h =
+1110.0000.0000.1010.0111.1000.0010.0000b
+
+1110           = MCFG base address = E0000000h
+0000.0000      = Bus 0
+1010.0         = Device 14h = 20
+111            = Function 7
+1000.0010.0000 = Register 820h 
+
+Register address not associated directly with hang.
+Bus, Device, Function is actual.
+
+For this platform, cannot fix problem by CMOS setup.
+Remove post card, disable onboard devices not fix problem.
+
+Possible solutions:
+Required intellectual reader,
+not scan all 8 PCI functions if single-function device,
+not scan if device absent ( Vendor ID = Device ID = FFFFh ).
+But required optional "raw scan all" mode for find undocumented resources.
+
+See also:
+ASUS_P5AD2E-Premium.
+
