@@ -1,5 +1,5 @@
 /*
-PCI dump utility: text report = f( binary dump ). (C)2020 IC Book Labs.
+PCI dump utility: text report = f( binary dump ). (C)2021 IC Book Labs.
 ------------------------------------------------------------------------
 Main module.
 Text Report = F ( Binary File)
@@ -17,7 +17,7 @@ import java.nio.file.*;
 public class PciDump 
 {
 private final static String MSG_ABOUT =
-    "PCI binary image analyser v0.00.48. (C)2021 IC Book Labs.";
+    "PCI binary image analyser v0.00.49. (C)2021 IC Book Labs.";
 private final static String MSG_LINE_ERROR =
     "Invalid command line, usage:" +
     "\r\njava -jar pcidump.jar <inputfile.bin> <outputfile.txt>";
