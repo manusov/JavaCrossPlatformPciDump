@@ -1,0 +1,9 @@
+display = on         ; on = console output enabled, off = disabled
+report = on          ; on = save report to file output.txt enabled, off = disabled
+waitkey = on         ; on = wait "Press any key" after operation, off = skip this waiting
+dumpfile = pci.bin   ; dump file path and name, used for save configuration space
+minbus = 0           ; minimum PCI bus number for scan
+maxbus = 255         ; maximum PCI bus number for scan
+automaxbus = on      ; auto detect maximum PCI bus number, skip unused buses
+skipnodev = on       ; skip read registers if PCI Vendor IC = Device ID = 0FFFFh
+skipnofnc = on       ; skip read registers at functions 1-7 of single function device

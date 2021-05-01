@@ -1,3 +1,11 @@
+Updates May, 1, 2021.
+1) PCIdump v0.00.50 (May, 1, 2021). Update PCI database.
+2) Release PCI configuration space binary reader (legacy reader).
+   For legacy platforms and platforms, incompatible with raw MCFG read method.
+3) Experiments with legacy reader. 
+   Platform example = ASUS P5V-VM-Ultra now supported.
+
+
 PCIdump v0.00.49 (March, 13, 2021)
 Update PCI database.
 

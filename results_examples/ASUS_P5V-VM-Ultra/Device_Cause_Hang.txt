@@ -1,8 +1,9 @@
-This platform yet not supported.
+This platform supported by Legacy Reader, released May, 1, 2021.
+This platform not supported by MCFG raw read mechanism.
 ASUS P5V-VM-Ultra
 
 MCFG base = E0000000h
-Hang on address = E00A7820h =
+When saving MCFG, hang on address = E00A7820h =
 1110.0000.0000.1010.0111.1000.0010.0000b
 
 1110           = MCFG base address = E0000000h

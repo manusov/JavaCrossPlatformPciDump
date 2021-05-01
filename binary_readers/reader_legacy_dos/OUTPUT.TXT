@@ -1,0 +1,16 @@
+Display console messages              = on
+Generate report file                  = on
+Wait key press from user              = on
+Binary dump file name                 = pci.bin
+Minimum PCI bus number                = 0
+Maximum PCI bus number                = 254
+Auto detect maximum PCI bus           = on
+Skip device if PCI VID=DID=FFFFh      = on
+Skip functions 1-7 if single function = on
+
+Detecting PCI bus... 
+ERROR: Incompatible configuration.
+       Code FAh = PCI Bus not detected.
+
+Done, press any key...
+
