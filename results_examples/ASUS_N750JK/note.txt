@@ -1,0 +1,2 @@
+MCFG.BIN, read under Windows 10, some devices hidden (GTX850).
+MCFG_DOS.BIN, read under DOS, devices available.
