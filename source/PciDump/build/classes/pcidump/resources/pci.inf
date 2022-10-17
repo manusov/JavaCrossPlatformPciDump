@@ -36019,3 +36019,6 @@ ID 0026 Physical Layer 16.0 GT/S
 ID 0027 Lane Margining at the Receiver
 ID 0028 Hierarchy ID
 ID 0029 Native PCIe Enclosure Management, NPEM
+ID 002A Physical Layer 32.0 GT/S
+ID 002B Alternate Protocol
+ID 002C System Firmware Intermediary, SFI

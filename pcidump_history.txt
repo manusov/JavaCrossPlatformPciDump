@@ -1,3 +1,22 @@
+PCIdump v0.00.58 (October, 17, 2022)
+Added extended capabilities IDs from PCIe 5.0 Specification.
+-------------------------------------------
+ID(hex) Comment
+-------------------------------------------
+ID 002A Physical Layer 32.0 GT/S
+ID 002B Alternate Protocol
+ID 002C System Firmware Intermediary, SFI
+-------------------------------------------
+Data source:
+PCI Express Base Specification Revision 5.0 Version 1.0.
+22 May 2019.
+5.0-1.0-PUB.
+Some details (below used references to this document items):
+1) 002Ah = Physical Layer 32.0 GT/S. Document item 7.7.6.
+2) 002Bh = Alternate Protocol. Document item 7.9.21.
+3) 002Ch = System Firmware Intermediary, SFI. Document item 7.9.23.
+
+
 PCIdump v0.00.57 (October, 5, 2022)
 1) Update PCI database.
 2) Add result for ASUS N750JK notebook.
