@@ -1,3 +1,8 @@
+PCIdump v0.00.59 (January, 21, 2023)
+1) Updated PCI database.
+2) Added instruction for interrogation Remappable MSI at Intel VT-d.
+
+
 PCIdump v0.00.58 (October, 17, 2022)
 Added extended capabilities IDs from PCIe 5.0 Specification.
 -------------------------------------------

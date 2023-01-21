@@ -1,0 +1,53 @@
+Исследование Remappable MSI (Message Signaled Interrupts)
+на платформе с поддержкой Intel VT-d.
+Используется утилита RWEverything.
+Плата ASUS TUF Gaming Z590-Plus WiFi.
+Исследуется трансляция запроса на прерывание от контроллера
+USB3 xHCI, реализованного в составе системной логики.
+-------------------------------------------------------------
+
+Согласно информации Диспетчера Устройств Microsoft Windows, устройство (контроллер
+INTEL USB3 xHCI в составе системной логики) использует IRQ -16 (MSI).
+
+Capability структура с идентификатором 05h обнаружена в цепочке структур и
+расположена по адресу 80h.
+32-битный регистр MSI Address расположен по адресу 84h и содержит FEE00318h.
+FEE00318h = 1111.1110.1110.0000.0000.0011.0001.1000b.
+Bits [19-5] = 000 0000 0001 1000b = 18h.
+Информация для вычисления позиции элемента IRTE (Interrupt Remapping Table Entry).
+16 bytes per entry. Entry index = 18h. Entry offset = 18h * 16 = 180h.
+
+Согласно ACPI-таблице DMAR, базовый адрес регистрового блока трансляционного
+агента VT-d, расположенного в Memory Mapped IO устройства VT-d, равен FED91000h.
+
+Базовый адрес таблицы трансляции (Interrupt Remapping Table, IRT), расположенной
+в оперативной памяти равен 2C5000h.
+
+16-байтный элемент IRTE расположен по адресу 2C5000h + 180h = 2C5180h.
+Его биты 23-16 (байт 2 считая от 0) содержат A1h. Это номер вектора прерывания.
+Entry offset = 18h * 16 = 180h. Offset 00h at picture.
+2C5000h + 180h = 2C5180h.
+
+---
+
+Принцип вычисления отрицательного номера IRQ (-16 в данном примере), применяемый
+Microsoft, остался неизвестен, так как корреляция между этим значением и
+прочитанными параметрами не обнаружена.
+
+Параметры: 
+1) Номер вектора прерывания = 0A1h = 161.
+2) Индекс элемента IRTE в таблице IRT = 18h = 24.
+3) Номер физической линии IRQ = не существует для MSI.
+Ни один из этих параметров не равен 16 или -16.
+
+---
+
+Ключевые сведения в документе:
+vt-directed-io-spec.PDF
+Intel Virtualization Technology for Directed I/O.
+Architecture Specificarion.
+June 2022. Revision 4.0.
+Order Number: D51397-015.
+https://www.intel.com/content/www/us/en/content-details/671081/intel-virtualization-technology-for-directed-i-o-architecture-specification.html?wapkw=vt-d%20specification
+
+---
