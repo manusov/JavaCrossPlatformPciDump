@@ -1,5 +1,5 @@
 /*
-PCI dump utility: text report = f( binary dump ). (C)2019 IC Book Labs.
+PCI dump utility: text report = f( binary dump ). (C)2023 IC Book Labs.
 ------------------------------------------------------------------------
 Class for load and interpreting PCI data base text file,
 this file located from JAR resources (part of java application).

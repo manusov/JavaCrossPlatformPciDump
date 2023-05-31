@@ -1,5 +1,5 @@
 /*
-PCI dump utility: text report = f( binary dump ). (C)2019 IC Book Labs.
+PCI dump utility: text report = f( binary dump ). (C)2023 IC Book Labs.
 ------------------------------------------------------------------------
 Class for convert binary image to text report, use database.
 Binary system image file loaded and represented by SystemManager class.

@@ -1,5 +1,5 @@
 /*
-PCI dump utility: text report = f( binary dump ). (C)2019 IC Book Labs.
+PCI dump utility: text report = f( binary dump ). (C)2023 IC Book Labs.
 ------------------------------------------------------------------------
 Class for load and interpreting PCI MCFG ( memory-mapped configuration space )
 binary file image, this file path get from command line.
