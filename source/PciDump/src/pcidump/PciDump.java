@@ -17,7 +17,7 @@ import java.nio.file.*;
 public class PciDump 
 {
 private final static String MSG_ABOUT =
-    "PCI binary image analyser v0.00.60. (C)2023 IC Book Labs.";
+    "PCI binary image analyser v0.00.61. (C)2023 IC Book Labs.";
 private final static String MSG_LINE_ERROR =
     "Invalid command line, usage:" +
     "\r\njava -jar pcidump.jar <inputfile.bin> <outputfile.txt>";
