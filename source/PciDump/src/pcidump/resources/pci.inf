@@ -38511,6 +38511,8 @@ affe  Sirrix AG security technologies
 	450e  PCI4S0EC 4-port ISDN S0 interface
 	dead  Sirrix.PCI4S0 4-port ISDN S0 interface
 
+### start of added ###
+
 b00c  IC Book Labs
 	001c  Diagnostic POST Card IC80+ PCI
 	011c  Parallel PCI Card IC128
